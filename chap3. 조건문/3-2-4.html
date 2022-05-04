@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 입력이 문자열
+    const rawInput = Number(prompt('정수를 입력하세요.', ''));
+    const last = rawInput[rawInput.length-1];
+
+    // 끝자리를 비교
+    if (last === '0' ||
+        last === '2' ||
+        last === '4' ||
+        last === '6' ||
+        last === '8') {
+          alert(`${rawInput}은 짝수입니다.`);
+        } else {
+          alert(`${rawInput}은 홀수입니다.`);
+        }
+  </script>
+</body>
+</html>
