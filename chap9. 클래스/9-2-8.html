@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>private 속성 사용하기(3)</title>
+</head>
+<body>
+  <script>
+    // 정사각형 클래스
+    class Squere {
+      #length 
+
+      constructor (length) {
+        if (length <= 0) {
+          throw '길이는 0보다 커야 합니다.'
+        }
+        this.#length = length
+      }
+      // 사각형의 둘레를 구하는 메소드
+      getPerimeter() {
+        return 4 * this.#length 
+      }
+
+      // 사각형의 넓이를 구하는 메소드 선언
+      getArea () {
+        return this.#length * this.#length
+      }
+    }
+
+    // 클래스 사용하기 
+    const squere = new Squere(10)
+    squere.#length = -10
+    console.log(`정사각형의 둘레 : ${squere.getPerimeter()}`)
+    console.log(`정사각형의 넓이 : ${squere.getArea()}`)
+  </script>
+</body>
+</html>

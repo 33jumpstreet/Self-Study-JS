@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사각형 클래스와 정사각현 클래스</title>
+</head>
+<body>
+  <script>
+    // 사각형 클래스를 선언
+    class Rectagle {
+      constructor (width, height) {
+        this.width = width
+        this.height = height
+      }
+
+      // 시각형의 둘레를 구하는 메소드 선언
+      getPerimeter() {
+        return 2 * (this.width + this.height) 
+      }
+
+      // 사각형의 넓이를 구하는 메소드 선언
+      getArea () {
+        return this.width * this.height
+      }
+    }
+
+    // 정사각형 클래스
+    class Squere extends Rectagle {
+      constructor (length) {
+        super(length, length) // 부모의 생산자 함수를 호출
+      }
+    }
+
+    // 클래스 사용하기 
+    const squere = new Squere(10, 20)
+    console.log(`정사각형의 둘레 : ${squere.getPerimeter()}`)
+    console.log(`정사각형의 넓이 : ${squere.getArea()}`)
+  </script>
+</body>
+</html>

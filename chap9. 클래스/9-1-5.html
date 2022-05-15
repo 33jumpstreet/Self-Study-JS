@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체를 생성하는 함수</title>
+</head>
+<body>
+  <script>
+    function createStudent (이름, 국어, 영어, 수학, 과학) {
+      return {
+        // 속성을 선언
+        이름 : 이름,
+        국어 : 국어,
+        영어 : 영어,
+        수학 : 수학,
+        과학 : 과학,
+
+        // 메소드 선언
+        getSum () {
+          return this.국어 + this.영어 + this.수학 + this.과학 
+        },
+
+        getAverage () {
+          return this.getSum()/4
+        },
+
+        toString () {
+          return `${this.이름}\t${this.getSum()}점\t${this.getAverage()}점\n`
+        }
+      }
+    }
+
+    // 객체를 선언
+    const students = []
+    students.push(createStudent('구름', 85, 90, 88, 100))
+    students.push(createStudent('세훈', 75, 100, 58, 90))
+    students.push(createStudent('소희', 95, 87, 78, 80))
+    students.push(createStudent('도일', 95, 80, 80, 70))
+    
+    // 출력하기
+    let output = `이름\t총점\t평균\n`
+    for (const s of students) {
+      output += s.toString() 
+    }
+    console.log(output)
+  </script>
+</body>
+</html>

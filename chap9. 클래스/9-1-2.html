@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 활용하기</title>
+</head>
+<body>
+  <script>
+    // 객체를 선언
+    const students = []
+    students.push({이름: '구름', 국어: 85, 영어: 90, 수학: 88, 과학: 100})
+    students.push({이름: '세훈', 국어: 75, 영어: 100, 수학: 58, 과학: 90})
+    students.push({이름: '소희', 국어: 95, 영어: 87, 수학: 78, 과학: 80})
+    students.push({이름: '도일', 국어: 95, 영어: 80, 수학: 80, 과학: 70})
+
+    // 출력하기
+    let output = `이름\t총점\t평균\n`
+    for (const student of students) {
+      const sum = student.국어 + student.영어 + student.수학 + student.과학
+      const average = sum / 4
+      output +=`${student.이름}\t${sum}점\t${average}점\n` 
+    }
+    console.log(output)
+  </script>
+</body>
+</html>
