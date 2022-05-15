@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>확인문제3</title>
+</head>
+<body>
+  <script>
+    const rawInput = prompt('태어난 해를 입력해주세요', '');
+    const year = Number(rawInput);
+
+    let gan
+    if (year % 10 === 0) {gan = '경';}
+    if (year % 10 === 1) {gan = '신';}
+    if (year % 10 === 2) {gan = '임';} 
+    if (year % 10 === 3) {gan = '계';}
+    if (year % 10 === 4) {gan = '갑';}
+    if (year % 10 === 5) {gan = '을';}
+    if (year % 10 === 6) {gan = '병';}
+    if (year % 10 === 7) {gan = '정';}
+    if (year % 10 === 8) {gan = '무';}
+    if (year % 10 === 9) {gan = '기';}
+
+    let tti;
+    if (year % 12 === 0) {tti = '신';}
+    if (year % 12 === 1) {tti = '유';}
+    if (year % 12 === 2) {tti = '술';} 
+    if (year % 12 === 3) {tti = '해';}
+    if (year % 12 === 4) {tti = '자';}
+    if (year % 12 === 5) {tti = '축';}
+    if (year % 12 === 6) {tti = '인';}
+    if (year % 12 === 7) {tti = '묘';}
+    if (year % 12 === 8) {tti = '진';}
+    if (year % 12 === 9) {tti = '사';}
+    if (year % 12 === 10) {tti = '오';}
+    if (year % 12 === 11) {tti = '미';}
+
+    alert(`${year}년에 태어났다면 ${gan}${tti} 년입니다.`)
+  </script>
+</body>
+</html>
