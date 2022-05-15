@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    // 데이터를 생성
+    const books = [{
+      name : '혼자 공부하는 파이썬',
+      price : 18000,
+      publicher : '한빛미디어'
+    }, {
+      name : '혼자 공부하는 자바스크립트',
+      price : 18000,
+      publicher : '한빛미디어'
+    }, {
+      name : '딥러닝을 위한 수학',
+      price : 20000,
+      publicher : '한빛미디어'
+    }, {
+      name : 'HTML 웹 프로그래밍 입문',
+      price : 30000,
+      publicher : '위키북스'
+    }]
+
+    // 가격으로 정렬한 뒤 출력
+    const output = _.sortBy(books, (book) => book.price)
+    console.log(JSON.stringify(output, null, 2))
+  </script>
+</body>
+</html>

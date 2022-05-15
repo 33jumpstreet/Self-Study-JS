@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON.parse() 메소드</title>
+</head>
+<body>
+  <script>
+    // 자료를 생성
+    const data = [{
+      name : '혼자 공부하는 파이썬',
+      price : 18000,
+      publicher : '한빛미디어'
+    }, {
+      name : '혼자 공부하는 자바스크립트',
+      price : 18000,
+      publicher : '한빛미디어'
+    }]
+
+    // 자료를 JSON을 변환
+    const json = JSON.stringify(data)
+    console.log(json)
+
+    // JSON 문자열을 다시 자바스크립트 객체로 변환
+    console.log(JSON.parse(json))
+  </script>
+</body>
+</html>

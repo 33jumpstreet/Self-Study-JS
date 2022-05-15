@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 속성 지정하기</title>
+</head>
+<body>
+  <script>
+    // 객체 생성
+    const obj = {
+      name : '혼자 공부하는 파이썬',
+      price : 18000,
+      publisher : '한빛미디어'
+    }
+
+    // 객체 내부에 속성 지정
+    obj.name = obj.name !== undefined ? obj.name : '제목미정'
+    obj.author = obj.author !== undefined ? obj.author : '저자미정'
+
+    // 객체 출력
+    console.log(JSON.stringify(obj, null, 2))
+  </script>
+</body>
+</html>
